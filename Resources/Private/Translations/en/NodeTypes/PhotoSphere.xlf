@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Gerdemann.PhotoSphere" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="ui.label" xml:space="preserve" approved="yes">
+        <source>PhotoSphere</source>
+	  </trans-unit>
+      <trans-unit id="groups.photosphere" xml:space="preserve" approved="yes">
+        <source>PhotoSphere</source>
+	  </trans-unit>
+      <trans-unit id="properties.image" xml:space="preserve" approved="yes">
+        <source>360° Image</source>
+	  </trans-unit>
+      <trans-unit id="properties.width" xml:space="preserve" approved="yes">
+        <source>Width</source>
+	  </trans-unit>
+      <trans-unit id="properties.height" xml:space="preserve" approved="yes">
+        <source>Height</source>
+	  </trans-unit>
+      <trans-unit id="properties.headline" xml:space="preserve" approved="yes">
+        <source>Headline</source>
+	  </trans-unit>
+      <trans-unit id="properties.copyright" xml:space="preserve" approved="yes">
+        <source>Copyright</source>
+	  </trans-unit>
+    </body>
+  </file>
+</xliff>

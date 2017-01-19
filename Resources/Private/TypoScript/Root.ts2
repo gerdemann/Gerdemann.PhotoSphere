@@ -1,0 +1,26 @@
+include: 'NodeTypes/*'
+
+prototype(TYPO3.Neos:Page) {
+	photoSphereScript = TYPO3.TypoScript:Tag {
+        @position = 'before closingBodyTag'
+        @if.onlyRenderWhenInFrontend = ${!documentNode.context.inBackend}
+
+        tagName = 'script'
+        attributes {
+            src = TYPO3.TypoScript:ResourceUri {
+                path = 'resource://Gerdemann.PhotoSphere/Public/JavaScript/PhotoSphere.js'
+            }
+        }
+    }
+    photoSphereGoogleApiScript = TYPO3.TypoScript:Tag {
+        @position = 'before closingBodyTag'
+        @if.onlyRenderWhenInFrontend = ${!documentNode.context.inBackend}
+
+        tagName = 'script'
+        attributes {
+            src = ${'https://maps.googleapis.com/maps/api/js?key=' + Configuration.setting('Gerdemann.PhotoSphere.googleApiKey') + '&callback=initPhotoSphere'}
+            async = true
+            defer = true
+        }
+    }
+}

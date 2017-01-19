@@ -1,0 +1,50 @@
+prototype(Gerdemann.PhotoSphere:PhotoSphere) < prototype(TYPO3.Neos:Content) {
+    image = ${q(node).property('image')}
+    width = ${q(node).property('width')}
+    height = ${q(node).property('height')}
+    headline = ${q(node).property('headline')}
+    copyright = ${q(node).property('copyright')}
+
+    @context.image = ${this.image}
+    @context.width = ${!String.isBlank(this.width) ? this.width : '100%'}
+    @context.height = ${!String.isBlank(this.height) ? this.height : '300px'}
+    @context.headline = ${this.headline}
+    @context.copyright = ${this.copyright}
+
+    attributes {
+        class = 'gerdemann-photosphere'
+        id = ${'photosphere-' + node.identifier}
+        style = ${'width: ' + width + '; height: ' + height + ';'}
+        data-image = TYPO3.TypoScript:ResourceUri {
+             resource = ${image.resource}
+        }
+        data-headline = ${headline}
+        data-copyright = ${copyright}
+        data-imagewidth = ${image.width}
+        data-imageheight = ${image.height}
+    }
+    placeholder = TYPO3.TypoScript:Tag {
+        tagName = 'img'
+        attributes {
+            src = TYPO3.TypoScript:Case {
+                imageAvailable {
+                    condition = ${image.resource}
+                    renderer = TYPO3.TypoScript:ResourceUri {
+                        resource = ${image.resource}
+                   }
+                }
+
+                fallBackimage {
+                    condition = ${image.resource}
+                    renderer = TYPO3.TypoScript:ResourceUri {
+                        path = 'Images/dummy-image.svg'
+                        package = 'TYPO3.Neos'
+                   }
+                }
+            }
+            style = ${'width: ' + width + '; height: ' + height + ';'}
+        }
+        alt = 'PhotoSphere Placeholder'
+        @if.onlyRenderWhenInBackend = ${documentNode.context.inBackend}
+    }
+}
