@@ -17,6 +17,15 @@
       <trans-unit id="properties.height" xml:space="preserve" approved="yes">
         <source>Height</source>
 	  </trans-unit>
+      <trans-unit id="properties.heading" xml:space="preserve" approved="yes">
+        <source>Horizontal angle</source>
+	  </trans-unit>
+      <trans-unit id="properties.pitch" xml:space="preserve" approved="yes">
+        <source>Vertical angle</source>
+	  </trans-unit>
+      <trans-unit id="properties.zoom" xml:space="preserve" approved="yes">
+        <source>Zoom</source>
+	  </trans-unit>
       <trans-unit id="properties.headline" xml:space="preserve" approved="yes">
         <source>Headline</source>
 	  </trans-unit>

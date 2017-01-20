@@ -38,6 +38,33 @@
         inspector:
           group: 'photosphere'
           position: 30
+    heading:
+      type: string
+      defaultValue: 0
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'photosphere'
+          position: 40
+    pitch:
+      type: string
+      defaultValue: 0
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'photosphere'
+          position: 50
+    zoom:
+      type: string
+      defaultValue: 0
+      ui:
+        label: i18n
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'photosphere'
+          position: 60
     headline:
       type: string
       defaultValue: '360°'
@@ -46,7 +73,7 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'photosphere'
-          position: 50
+          position: 70
     copyright:
       type: string
       defaultValue: '(c) 2017 Michael Gerdemann'
@@ -55,4 +82,4 @@
         reloadIfChanged: TRUE
         inspector:
           group: 'photosphere'
-          position: 50
+          position: 80

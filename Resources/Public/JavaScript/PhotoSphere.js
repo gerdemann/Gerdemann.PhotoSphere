@@ -6,7 +6,12 @@ function initPhotoSphere() {
             {
                 pano: photosphereElements[i].id,
                 visible: true,
-                panoProvider: getCustomPanorama
+                panoProvider: getCustomPanorama,
+                pov: {
+                    heading: parseInt(photosphereElements[i].dataset.heading),
+                    pitch: parseInt(photosphereElements[i].dataset.pitch),
+                    zoom: parseInt(photosphereElements[i].dataset.zoom)
+                }
             }
         );
     }

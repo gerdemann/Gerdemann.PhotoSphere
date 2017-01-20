@@ -2,12 +2,18 @@ prototype(Gerdemann.PhotoSphere:PhotoSphere) < prototype(TYPO3.Neos:Content) {
     image = ${q(node).property('image')}
     width = ${q(node).property('width')}
     height = ${q(node).property('height')}
+    heading = ${q(node).property('heading')}
+    pitch = ${q(node).property('pitch')}
+    zoom = ${q(node).property('zoom')}
     headline = ${q(node).property('headline')}
     copyright = ${q(node).property('copyright')}
 
     @context.image = ${this.image}
     @context.width = ${!String.isBlank(this.width) ? this.width : '100%'}
     @context.height = ${!String.isBlank(this.height) ? this.height : '300px'}
+    @context.heading = ${!String.isBlank(this.heading) ? this.heading : 0}
+    @context.pitch = ${!String.isBlank(this.pitch) ? this.pitch : 0}
+    @context.zoom = ${!String.isBlank(this.zoom) ? this.zoom : 0}
     @context.headline = ${this.headline}
     @context.copyright = ${this.copyright}
 
@@ -18,6 +24,9 @@ prototype(Gerdemann.PhotoSphere:PhotoSphere) < prototype(TYPO3.Neos:Content) {
         data-image = TYPO3.TypoScript:ResourceUri {
              resource = ${image.resource}
         }
+        data-heading = ${heading}
+        data-pitch = ${pitch}
+        data-zoom = ${zoom}
         data-headline = ${headline}
         data-copyright = ${copyright}
         data-imagewidth = ${image.width}

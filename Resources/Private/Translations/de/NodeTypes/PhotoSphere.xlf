@@ -22,6 +22,18 @@
         <source>Height</source>
 	    <target xml:lang="de">Höhe</target>
 	  </trans-unit>
+      <trans-unit id="properties.heading" xml:space="preserve" approved="yes">
+        <source>Horizontal angle</source>
+	    <target xml:lang="de">Horizontaler Winkel</target>
+	  </trans-unit>
+      <trans-unit id="properties.pitch" xml:space="preserve" approved="yes">
+        <source>Vertical angle</source>
+	    <target xml:lang="de">Vertikaler Winkel</target>
+	  </trans-unit>
+      <trans-unit id="properties.zoom" xml:space="preserve" approved="yes">
+        <source>Zoom</source>
+	    <target xml:lang="de">Zoom</target>
+	  </trans-unit>
       <trans-unit id="properties.headline" xml:space="preserve" approved="yes">
         <source>Headline</source>
 	    <target xml:lang="de">Titel</target>
