@@ -18,3 +18,8 @@ How-To:
 * Publish all changes
 
 Now you should see the Google PhotoSphere iFrame in the frontend.
+
+License
+-------
+
+The MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
