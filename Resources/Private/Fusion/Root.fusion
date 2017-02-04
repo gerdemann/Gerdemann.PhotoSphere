@@ -1,18 +1,18 @@
 include: 'NodeTypes/*'
 
-prototype(TYPO3.Neos:Page) {
-	photoSphereScript = TYPO3.TypoScript:Tag {
+prototype(Neos.Neos:Page) {
+	photoSphereScript = Neos.Fusion:Tag {
         @position = 'before closingBodyTag'
         @if.onlyRenderWhenInFrontend = ${!documentNode.context.inBackend}
 
         tagName = 'script'
         attributes {
-            src = TYPO3.TypoScript:ResourceUri {
+            src = Neos.Fusion:ResourceUri {
                 path = 'resource://Gerdemann.PhotoSphere/Public/JavaScript/PhotoSphere.js'
             }
         }
     }
-    photoSphereGoogleApiScript = TYPO3.TypoScript:Tag {
+    photoSphereGoogleApiScript = Neos.Fusion:Tag {
         @position = 'before closingBodyTag'
         @if.onlyRenderWhenInFrontend = ${!documentNode.context.inBackend}
 

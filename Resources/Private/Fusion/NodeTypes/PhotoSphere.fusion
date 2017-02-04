@@ -1,4 +1,4 @@
-prototype(Gerdemann.PhotoSphere:PhotoSphere) < prototype(TYPO3.Neos:Content) {
+prototype(Gerdemann.PhotoSphere:PhotoSphere) < prototype(Neos.Neos:Content) {
     image = ${q(node).property('image')}
     width = ${q(node).property('width')}
     height = ${q(node).property('height')}
@@ -21,7 +21,7 @@ prototype(Gerdemann.PhotoSphere:PhotoSphere) < prototype(TYPO3.Neos:Content) {
         class = 'gerdemann-photosphere'
         id = ${'photosphere-' + node.identifier}
         style = ${'width: ' + width + '; height: ' + height + ';'}
-        data-image = TYPO3.TypoScript:ResourceUri {
+        data-image = Neos.Fusion:ResourceUri {
              resource = ${image.resource}
         }
         data-heading = ${heading}
@@ -32,22 +32,22 @@ prototype(Gerdemann.PhotoSphere:PhotoSphere) < prototype(TYPO3.Neos:Content) {
         data-imagewidth = ${image.width}
         data-imageheight = ${image.height}
     }
-    placeholder = TYPO3.TypoScript:Tag {
+    placeholder = Neos.Fusion:Tag {
         tagName = 'img'
         attributes {
-            src = TYPO3.TypoScript:Case {
+            src = Neos.Fusion:Case {
                 imageAvailable {
                     condition = ${image.resource}
-                    renderer = TYPO3.TypoScript:ResourceUri {
+                    renderer = Neos.Fusion:ResourceUri {
                         resource = ${image.resource}
                    }
                 }
 
                 fallBackimage {
                     condition = ${image.resource}
-                    renderer = TYPO3.TypoScript:ResourceUri {
+                    renderer = Neos.Fusion:ResourceUri {
                         path = 'Images/dummy-image.svg'
-                        package = 'TYPO3.Neos'
+                        package = 'Neos.Neos'
                    }
                 }
             }

@@ -1,85 +1,85 @@
 'Gerdemann.PhotoSphere:PhotoSphere':
   superTypes:
-    'TYPO3.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: i18n
-    icon: 'icon-image'
+    icon: icon-image
     position: 200
     inspector:
       groups:
         photosphere:
           label: i18n
           position: 5
-          icon: 'icon-image'
+          icon: icon-image
   properties:
     image:
-      type: TYPO3\Media\Domain\Model\ImageInterface
+      type: Neos\Media\Domain\Model\ImageInterface
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 10
     width:
       type: string
-      defaultValue: '100%'
+      defaultValue: 100%
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 20
     height:
       type: string
-      defaultValue: '300px'
+      defaultValue: 300px
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 30
     heading:
       type: string
       defaultValue: 0
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 40
     pitch:
       type: string
       defaultValue: 0
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 50
     zoom:
       type: string
       defaultValue: 0
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 60
     headline:
       type: string
-      defaultValue: '360°'
+      defaultValue: 360°
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 70
     copyright:
       type: string
       defaultValue: '(c) 2017 Michael Gerdemann'
       ui:
         label: i18n
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
-          group: 'photosphere'
+          group: photosphere
           position: 80

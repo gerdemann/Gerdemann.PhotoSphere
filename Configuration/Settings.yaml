@@ -1,14 +1,13 @@
 Gerdemann:
   PhotoSphere:
-    googleApiKey: 'ENTER_HERE_THE_GOOGLE_API_KEY'
-
-TYPO3:
+    googleApiKey: ENTER_HERE_THE_GOOGLE_API_KEY
+Neos:
   Neos:
-    typoScript:
-      autoInclude:
-        'Gerdemann.PhotoSphere': TRUE
-
     userInterface:
       translation:
         autoInclude:
-          'Gerdemann.PhotoSphere': ['NodeTypes/*']
+          Gerdemann.PhotoSphere:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        Gerdemann.PhotoSphere: true
